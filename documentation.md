@@ -1,4 +1,5 @@
 ### Assessment Task 2
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
 ## PART A: Data Selection and Attributes.
 
 6 Attributes:
@@ -15,4 +16,5 @@ This Attribute is utilised to determine the material robusticity and strength th
 This attribute depicts the cars fuel source and environmental sustainability by distinguishing it to be one of the 3 major categories. Whether a car is traditional petrol, Ev ir a hybrid will determine its environemtal friendliness, acceleration potential as well as its maximum range. This attribute is heavily relevant today with climate concerns and the evergrowing transition into EV/Hybrid Cars. The hybrid model will deliver the most points then followed by the ev then petrol for this category.
 6. Price
 This attribute will serve as a value marker and instead of operating at a batter due to more affordability it will attribute more points the higher the price is.
-
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+## PART B: Class Design.
