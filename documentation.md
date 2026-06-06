@@ -22,27 +22,42 @@ ________________________________________________________________________________
 Overview:
 
 Car:()
+
 Attributes:()
+
 Methods:()
+
 Description:()
 
 Card:()
+
 Attributes:()
+
 Methods:()
+
 Description:()
 
 Deck:()
+
 Attributes:()
+
 Methods:()
+
 Description:()
 
 Player:()
+
 Attributes:()
+
 Methods:()
+
 Description:()
 
 Game:()
+
 Attributes:()
+
 Methods:()
+
 Description:()
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
