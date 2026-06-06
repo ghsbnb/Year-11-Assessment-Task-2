@@ -18,3 +18,31 @@ This attribute depicts the cars fuel source and environmental sustainability by 
 This attribute will serve as a value marker and instead of operating at a batter due to more affordability it will attribute more points the higher the price is.
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
 ## PART B: Class Design.
+
+Overview:
+
+Car:
+Attributes:
+Methods:
+Description:
+
+Card:
+Attributes:
+Methods:
+Description:
+
+Deck:
+Attributes:
+Methods:
+Description:
+
+Player:
+Attributes:
+Methods:
+Description:
+
+Game:
+Attributes:
+Methods:
+Description:
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
