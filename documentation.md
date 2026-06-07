@@ -23,9 +23,16 @@ Overview:
 
 # Car:()
 
-Attributes:()
+Attributes:
+. - Top Speed : Int
+. - Car Intelligence : Int
+. - Acceleration : double
+. - Strain Gauge : Int
+. - Engine Type : String
+. - Price : Int
 
-Methods:()
+Methods:
+. + 
 
 Description:()
 
