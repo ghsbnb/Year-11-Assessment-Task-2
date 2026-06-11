@@ -32,7 +32,8 @@ Attributes:
 . - Price : Int
 
 Methods:
-. + 
+. + Drag Race : void
+. + Drift Out : void
 
 Description:()
 
