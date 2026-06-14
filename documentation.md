@@ -32,16 +32,18 @@ Attributes:
 > - Price : Int
 
 Methods:
-. + Drag Race : void
-. + Drift Out : void
-. + Total Mog : void
+> + Drag Race : void
+> + Drift Out : void
+> + Total Mog : void
 
 Description:() This class serves as a vital function of the card game by acting as the main proponent that carries out the gameplay and leeds to the eventual winner of the game.
 
 # Card:() 
 
 Attributes:()
-> - 
+> - Card ID : String
+> - Rank : String
+> - Lvl : Int
 
 Methods:()
 
