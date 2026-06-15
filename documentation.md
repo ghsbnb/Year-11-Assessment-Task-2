@@ -46,7 +46,7 @@ Methods:
 > * public void updateCarDetails()
 > * public Card convertToCard()
 
-Description:()
+Description:() This class serves as the base unit of competition allowing the system to draw and create cards.
 
 # Card:()
 
@@ -66,7 +66,7 @@ Methods:()
 > * public int getCardValue()
 > * public void setInPlay(boolean status)
 
-Description:()
+Description:() This class serves as the playable versions of the cars.
 
 # Deck:()
 
@@ -88,7 +88,7 @@ Methods:()
 > * public boolean isEmpty()
 > * public void resetDeck()
 
-Description:()
+Description:() This serves as the place the cards are stored and can be maniuplated by the player.
 
 # Player:()
 
@@ -114,7 +114,7 @@ Methods:()
 > * public boolean hasCardsRemaining()
 > * public void displayHand()
 
-Description:()
+Description:() This is the player and here is where actions that the player can take to play will be executed.
 
 # Game:()
 
@@ -146,5 +146,5 @@ Methods:()
 > * public void restartGame()
 > * public void endGame()
 
-Description:()
+Description:() This allows the system to interact with turns from players and terminate, start and manipulate the game.
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
