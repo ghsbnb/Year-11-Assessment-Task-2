@@ -148,3 +148,120 @@ Methods:()
 
 Description:() This allows the system to interact with turns from players and terminate, start and manipulate the game.
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
+## PART C: Class Design.
+
+Overview:
+
+┌───────────────────────────────────────┐
+│                 Car                   │
+├───────────────────────────────────────┤
+│ - carID : int                         │
+│ - make : String                       │
+│ - model : String                      │
+│ - year : int                          │
+│ - topSpeed : int                      │
+│ - carIntelligence : int               │
+│ - acceleration : double               │
+│ - strainGauge : int                   │
+│ - carType : String                    │
+│ - price : double                      │
+│ - imagePath : String                  │
+│ - overallRating : int                 │
+├───────────────────────────────────────┤
+│ + calculateOverallRating() : void     │
+│ + getAttribute(String) : int          │
+│ + displayCarInfo() : void             │
+│ + updateCarDetails() : void           │
+│ + convertToCard() : Card              │
+└───────────────────────────────────────┘
+                  │
+                  │ Association
+                  ▼
+┌───────────────────────────────────────┐
+│                 Card                  │
+├───────────────────────────────────────┤
+│ - cardID : int                        │
+│ - car : Car                           │
+│ - owner : Player                      │
+│ - isInPlay : boolean                  │
+│ - cardValue : int                     │
+├───────────────────────────────────────┤
+│ + displayCard() : void                │
+│ + compareAttribute(                   │
+│   String, Card) : int                 │
+│ + assignOwner(Player) : void          │
+│ + getCardValue() : int                │
+│ + setInPlay(boolean) : void           │
+└───────────────────────────────────────┘
+          ▲                     ▲
+          │                     │
+          │ owns                │ owner
+          │                     │
+          │                     │
+┌───────────────────────┐   ┌───────────────────────────┐
+│        Deck           │   │          Player           │
+├───────────────────────┤   ├───────────────────────────┤
+│ - cards : ArrayList   │   │ - playerID : int          │
+│ - deckSize : int      │   │ - playerName : String     │
+│ - discardPile         │   │ - hand : ArrayList<Card>  │
+│ - currentCardIndex    │   │ - score : int             │
+├───────────────────────┤   │ - roundsWon : int         │
+│ + createDeck()        │   │ - isCurrentTurn : boolean │
+│ + shuffleDeck()       │   │ - activeCard : Card       │
+│ + dealCards(int)      │   ├───────────────────────────┤
+│ + drawCard() : Card   │   │ + drawCard(Deck) : void   │
+│ + addCard(Card)       │   │ + playCard() : Card       │
+│ + removeCard(Card)    │   │ + chooseAttribute()       │
+│ + isEmpty() : boolean │   │   : String                │
+│ + resetDeck()         │   │ + receiveCard(Card)       │
+└───────────────────────┘   │ + addPoint()              │
+          ▲                 │ + incrementRoundsWon()    │
+          │                 │ + getTopCard() : Card     │
+          │                 │ + hasCardsRemaining()     │
+          │                 │   : boolean               │
+          │                 │ + displayHand() : void    │
+          │                 └───────────────────────────┘
+          │
+          │ Composition
+          │
+          ▼
+┌────────────────────────────────────────────┐
+│                   Game                     │
+├────────────────────────────────────────────┤
+│ - gameID : int                             │
+│ - players : ArrayList<Player>              │
+│ - deck : Deck                              │
+│ - currentRound : int                       │
+│ - currentPlayer : Player                   │
+│ - winningPlayer : Player                   │
+│ - gameStatus : String                      │
+│ - roundWinner : Player                     │
+│ - cardsInBattle : ArrayList<Card>          │
+├────────────────────────────────────────────┤
+│ + startGame() : void                       │
+│ + setupPlayers() : void                    │
+│ + dealCards() : void                       │
+│ + playRound() : void                       │
+│ + compareCards() : void                    │
+│ + determineRoundWinner() : Player          │
+│ + awardCardsToWinner() : void              │
+│ + switchTurn() : void                      │
+│ + checkGameOver() : boolean                │
+│ + determineGameWinner() : Player           │
+│ + displayLeaderboard() : void              │
+│ + restartGame() : void                     │
+│ + endGame() : void                         │
+└────────────────────────────────────────────┘
+
+Game ◆────────── Deck
+Game ◆────────── Player (2..*)
+
+Deck ◆────────── Card (0..*)
+
+Player ◆──────── Card (0..*)
+
+Card ──────────► Car
+Card ──────────► Player
+
+Player ─ ─ ─ ─► Deck   (dependency: drawCard())
+Car ─ ─ ─ ─ ─► Card    (dependency: convertToCard())
