@@ -15,7 +15,7 @@ This Attribute is utilised to determine the material robusticity and strength th
 5. Car Type Ev/Hybrid/Petrol
 This attribute depicts the cars fuel source and environmental sustainability by distinguishing it to be one of the 3 major categories. Whether a car is traditional petrol, Ev ir a hybrid will determine its environemtal friendliness, acceleration potential as well as its maximum range. This attribute is heavily relevant today with climate concerns and the evergrowing transition into EV/Hybrid Cars. The hybrid model will deliver the most points then followed by the ev then petrol for this category.
 6. Price
-This attribute will serve as a value marker and instead of operating at a batter due to more affordability it will attribute more points the higher the price is.
+This attribute will serve as a value marker and instead of attributing points due to more affordability it will attribute more points the higher the price is.
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
 ## PART B: Class Design.
 
@@ -24,28 +24,47 @@ Overview:
 # Car:()
 
 Attributes:
-> - Top Speed : Int
-> - Car Intelligence : Int
-> - Acceleration : double
-> - Strain Gauge : Int
-> - Engine Type : String
-> - Price : Int
+
+> * private int carID
+> * private String make
+> * private String model
+> * private int year
+> * private int topSpeed
+> * private int carIntelligence
+> * private double acceleration
+> * private int strainGauge
+> * private String carType
+> * private double price
+> * private String imagePath
+> * private int overallRating
 
 Methods:
-> + Drag Race : void
-> + Drift Out : void
-> + Total Mog : void
 
-Description:() This class serves as a vital function of the card game by acting as the main proponent that carries out the gameplay and leeds to the eventual winner of the game.
+> * public void calculateOverallRating()
+> * public int getAttribute(String attributeName)
+> * public void displayCarInfo()
+> * public void updateCarDetails()
+> * public Card convertToCard()
 
-# Card:() 
+Description:()
+
+# Card:()
 
 Attributes:()
-> - Card ID : String
-> - Rank : String
-> - Lvl : Int
+
+> * private int cardID
+> * private Car car
+> * private Player owner
+> * private boolean isInPlay
+> * private int cardValue
 
 Methods:()
+
+> * public void displayCard()
+> * public int compareAttribute(String attributeName, Card opponentCard)
+> * public void assignOwner(Player player)
+> * public int getCardValue()
+> * public void setInPlay(boolean status)
 
 Description:()
 
@@ -53,7 +72,21 @@ Description:()
 
 Attributes:()
 
+> * private ArrayList<Card> cards
+> * private int deckSize
+> * private ArrayList<Card> discardPile
+> * private int currentCardIndex
+
 Methods:()
+
+> * public void createDeck()
+> * public void shuffleDeck()
+> * public void dealCards(int numberOfPlayers)
+> * public Card drawCard()
+> * public void addCard(Card card)
+> * public void removeCard(Card card)
+> * public boolean isEmpty()
+> * public void resetDeck()
 
 Description:()
 
@@ -61,7 +94,25 @@ Description:()
 
 Attributes:()
 
+> * private int playerID
+> * private String playerName
+> * private ArrayList<Card> hand
+> * private int score
+> * private int roundsWon
+> * private boolean isCurrentTurn
+> * private Card activeCard
+
 Methods:()
+
+> * public void drawCard(Deck deck)
+> * public Card playCard()
+> * public String chooseAttribute()
+> * public void receiveCard(Card card)
+> * public void addPoint()
+> * public void incrementRoundsWon()
+> * public Card getTopCard()
+> * public boolean hasCardsRemaining()
+> * public void displayHand()
 
 Description:()
 
@@ -69,7 +120,31 @@ Description:()
 
 Attributes:()
 
+> * private int gameID
+> * private ArrayList<Player> players
+> * private Deck deck
+> * private int currentRound
+> * private Player currentPlayer
+> * private Player winningPlayer
+> * private String gameStatus
+> * private Player roundWinner
+> * private ArrayList<Card> cardsInBattle
+
 Methods:()
+
+> * public void startGame()
+> * public void setupPlayers()
+> * public void dealCards()
+> * public void playRound()
+> * public void compareCards()
+> * public Player determineRoundWinner()
+> * public void awardCardsToWinner()
+> * public void switchTurn()
+> * public boolean checkGameOver()
+> * public Player determineGameWinner()
+> * public void displayLeaderboard()
+> * public void restartGame()
+> * public void endGame()
 
 Description:()
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
