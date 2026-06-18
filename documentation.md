@@ -318,7 +318,7 @@ Petrol = 1 point
 The selected attribute is applied to all cards currently in play for that round.
 
 ## How Winners are Determined
-Afte rplayers reveal their cards the winning attribute is delegated the winner of that round.
+After players reveal their cards the winning attribute is delegated the winner of that round.
 
 They then:
 1. Receive all the cards dealt in that round.
@@ -418,4 +418,4 @@ LEGAL
 4. One legal issue is copyright because vehicle images and information found online usually belong to somebody. This means they cannot simply be copied and used without permission. This is especially important if information or images are taken from websites such as carsales.com.au. Another responsibility is making sure the information is accurate. Vehicle specifications can change depending on the model year or version of the vehicle so incorrect information could mislead players and create unfair comparisons. I also have a responsibility to make it clear that the overall rating is only for gameplay purposes. The rating system is based on a custom formula and does not officially prove one vehicle is better than another vehicle in every situation. 
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________
 ## THE END LADS LESSS GOOOOOOOO
-<small>no nazi or extremist symbols are present within this task</small>
+</small>no nazi or extremist symbols are present within this task</small>
